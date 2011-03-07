@@ -4,10 +4,9 @@ from google.appengine.ext.webapp import template
 from google.appengine.api import users
 
 nav = {
-    'new' : '/',
-    'top' : '/top',
-    'browse' : '/browse',
-    'submit' : '/submitquote',
+    'blog' : '/',
+    'about' : '/about',
+    'projects' : '/projects',
     'login' : None,
     'login_text' : None
     }
