@@ -6,11 +6,15 @@ from google.appengine.ext import db
 
 #my bits and peices
 import render
+from BData import Post
 
 class MainPage(webapp.RequestHandler):
     def get(self):
+        query = Post.all().order('-date')
+        posts = query.fetch(limit=10, offset=0)
+
         render.header(self)
-        self.response.out.write('Something will go here soon')
+        render.body(self, 'showPosts.html', { 'posts' : posts})
         render.footer(self)
 
 application = webapp.WSGIApplication([('/', MainPage)], debug=True)
