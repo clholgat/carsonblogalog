@@ -7,6 +7,7 @@ nav = {
     'blog' : '/',
     'about' : '/about',
     'projects' : '/projects',
+    'post' : '/post',
     'login' : None,
     'login_text' : None
     }

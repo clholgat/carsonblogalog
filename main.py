@@ -10,7 +10,7 @@ from BData import Post
 
 class MainPage(webapp.RequestHandler):
     def get(self):
-        query = Post.all().order('-date')
+        query = Post.all().order('-date_posted')
         posts = query.fetch(limit=10, offset=0)
 
         render.header(self)

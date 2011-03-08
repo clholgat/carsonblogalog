@@ -13,6 +13,26 @@ handlers:
 - url: /index\.html
   script: main.py
   
+- url: /post
+  script: post.py
+  login: admin
+  
+- url: /postpost
+  script: post.py
+  login: admin
+  
+- url: /edit
+  script: edit.py
+  login: admin
+  
+- url: /edit/(.*)
+  script: edit.py
+  login: admin
+  
+- url: /update
+  script: edit.py
+  login: admin
+  
 - url: /.*
   script: oops.py
   

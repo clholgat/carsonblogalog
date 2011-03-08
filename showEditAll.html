@@ -1,0 +1,7 @@
+{% for post in posts %}
+    <div id="post-inline">
+        <h3>{{ post.title }}</h3>
+        <a href="/edit/{{ post.key.id }}">Edit</a>
+        <a href="/delete/{{ post.key.id }}">Delete</a>
+    </div>
+{% endfor %}

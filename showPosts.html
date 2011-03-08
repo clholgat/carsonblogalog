@@ -1,9 +1,11 @@
  {% for post in posts %}
     <div id="post">
-        <h2>{{ quote.title }}</h2>
-        <p>{{ quote.body }}</p>
+        <h2>{{ post.title }}</h2>
+        <p>{{ post.body }}</p>
         <div id="bottom">
-            {{ quote.date }}
+            Posted: {{ post.date_posted|date:"D d M Y" }}
+            Edited: {{ post.date_edited|date:"D d M Y" }}
+            <a href="/edit/{{ post.key.id }}">Edit</a>
         </div>
     </div>
  {% endfor %}

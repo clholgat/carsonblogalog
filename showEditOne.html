@@ -1,0 +1,8 @@
+<form action="{{ redirect }}" method="post">
+    <div id="post">
+        <input type="text" name="title" value="{{ post.title }}" />
+        <input type="hidden" name="id" value="{{ post.key.id }}" />
+        <textarea name="body" rows="4" cols="50">{{ post.body }}</textarea>
+        <input type="submit" value="Edit" />
+    </div>
+</form>
