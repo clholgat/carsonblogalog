@@ -29,6 +29,10 @@ handlers:
   script: edit.py
   login: admin
   
+- url: /delete/(.*)
+  script: delete.py
+  login: admin
+  
 - url: /update
   script: edit.py
   login: admin
